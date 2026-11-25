@@ -1,20 +1,22 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# IronLog
 
-# Run and deploy your AI Studio app
+IronLog is a fitness and workout tracking web application built to help users organize workouts, follow structured exercise routines, and track training sessions in a clean interface.
 
-This contains everything you need to run your app locally.
+## Features
+- Workout splits and exercise sections for consistent training
+- Simple and easy-to-navigate user interface
+- Session and progress tracking layout
 
-View your app in AI Studio: https://ai.studio/apps/d4aa3ebd-4611-454b-b3ee-226c54d04587
+## Project Structure
+- `src/` — Application source code, components, and styling
+- `public/` — Static assets and icons
+- `index.html` — Main HTML entry point
+- `package.json` — Project dependencies and scripts
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
+## Running the Project
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+   ```bash
+   npm install
+
+   npm run dev
+   
