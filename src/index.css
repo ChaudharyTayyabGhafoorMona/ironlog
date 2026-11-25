@@ -1,0 +1,216 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Barlow Condensed", sans-serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #f7f6f2;
+    color: #182026;
+    color-scheme: light;
+  }
+
+  body {
+    background-color: #f7f6f2;
+    color: #182026;
+    overflow-x: hidden;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.pb-safe {
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f7f6f2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d5d0c5;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8b1a3;
+}
+
+@keyframes anatomyRedPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.72;
+  }
+}
+
+@keyframes anatomyBodyLift {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes anatomyBodyDip {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes anatomyArmPressL {
+  0%,
+  100% {
+    transform: rotate(4deg);
+  }
+  50% {
+    transform: rotate(22deg);
+  }
+}
+
+@keyframes anatomyArmPressR {
+  0%,
+  100% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(-22deg);
+  }
+}
+
+@keyframes anatomyArmRaiseL {
+  0%,
+  100% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(34deg);
+  }
+}
+
+@keyframes anatomyArmRaiseR {
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(-34deg);
+  }
+}
+
+@keyframes anatomyArmPullL {
+  0%,
+  100% {
+    transform: rotate(26deg);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+}
+
+@keyframes anatomyArmPullR {
+  0%,
+  100% {
+    transform: rotate(-26deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+}
+
+@keyframes anatomyCurlForearmL {
+  0%,
+  100% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes anatomyCurlForearmR {
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes anatomyLegLift {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes anatomyProgressBar {
+  0%,
+  100% {
+    transform: scaleX(0.24);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+}
+
+.anatomy-red-pulse {
+  animation: anatomyRedPulse 1.4s ease-in-out infinite;
+}
+
+.anatomy-progress-bar {
+  transform-origin: left center;
+  animation: anatomyProgressBar 2.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
